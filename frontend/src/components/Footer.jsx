@@ -9,7 +9,9 @@ function Footer() {
             <div className='flex flex-col items-center mb-6 md:mb-0'>
                 <img src={Logo} alt="Jack Suites Logo" className='h-16 w-auto mb-2'/>
                 <p className='text-center mx-3 md:text-left'>
-                    Jack Suites is a luxury hotel offering a serene and elegant escape in the heart of Lagos, Nigeria. Whether you're traveling for business or leisure, our well-appointed rooms, top-notch services, and warm hospitality make us the perfect choice for a memorable stay.
+                    Jack Suites is a luxury hotel offering a serene and elegant escape in the heart of Lagos, Nigeria.
+                    Whether you're traveling for business or leisure, our well-appointed rooms, top-notch services,
+                    and warm hospitality make us the perfect choice for a memorable stay.
                 </p>
             </div>
 
