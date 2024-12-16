@@ -8,6 +8,7 @@ import 'swiper/css/autoplay';
 import HeroImage1 from '../assets/hero-image-1.jpg';
 import HeroImage2 from '../assets/hero-image-2.jpg';
 import HeroImage3 from '../assets/hero-image-3.jpg';
+import ParaImage from '../assets/parallax-image.jpg'
 
 function Index() {
   return (
@@ -137,7 +138,23 @@ function Index() {
         </div>
       </section>
 
-      
+      {/* Parallax Section */}
+      <section
+        className='relative w-full h-[400px] bg-fixed bg-center bg-cover flex items-center justify-center'
+        style={{ backgroundImage: `url(${ParaImage})` }}>
+          {/* Backgound Overlay */}
+          <div className='absolute inset-0' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
+              {/* Content */}
+              <div className='absolute inset-0 flex items-center justify-center'>
+                <div className='text-center text-white px-6'>
+                  <h2 className='text-4xl font-bold mb-4 md:text-5xl'>Experience Unmatched Luxury</h2>
+                  <p className='text-lg md:text-2xl mb-6'>Your comfort is our priority - Discover world-class hospitality.</p>
+                  <button className='px-6 py-2 bg-zinc-500 font-bold text-black rounded-full hover:bg-zinc-300 hover:text-black transition'>
+                    Book Your Stay
+                  </button>
+                </div>
+              </div>
+      </section>
     </div>
   )
 }
