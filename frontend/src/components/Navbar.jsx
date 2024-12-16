@@ -86,7 +86,7 @@ function Navbar() {
 
       {/* Sidebar Navigation */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-800 shadow-md transform ${
+        className={`fixed top-0 left-0 h-full w-64 z-50 bg-slate-800 shadow-md transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 md:hidden`}
       >

@@ -3,12 +3,12 @@ import Logo from '../assets/Logo.jpg';
 
 function Footer() {
   return (
-    <footer className='bg-slate-800 text-white py-8'>
+    <footer className='bg-slate-800 text-white py-8 mt-8'>
         <div className='container mx-auto px-4 flex flex-col md:flex-row justify-evenly items-center'>
             {/* Logo */}
             <div className='flex flex-col items-center mb-6 md:mb-0'>
                 <img src={Logo} alt="Jack Suites Logo" className='h-16 w-auto mb-2'/>
-                <p className='text-center mx-3 md:text-left max-w-80'>
+                <p className='text-justify mx-3 md:text-left max-w-80'>
                     Jack Suites is a luxury hotel offering a serene and elegant escape in the heart of Lagos, Nigeria.
                     Whether you're traveling for business or leisure, our well-appointed rooms, top-notch services,
                     and warm hospitality make us the perfect choice for a memorable stay.
@@ -20,7 +20,7 @@ function Footer() {
                 <h3 className='text-lg font-bold mb-2'>Stay Updated</h3>
                 <form className='flex'>
                     <input type="email" placeholder='Enter your email' className='px-4 py-2 bg-gray-700 text-white rounded-l-full focus:outline-none'/>
-                    <button type='submit' className='px-4 py-2 bg-zinc-500 text-white rounded-r-full hover:bg-zinc-300 transition'>
+                    <button type='submit' className='px-4 py-2 bg-zinc-500 text-white rounded-r-full hover:bg-zinc-300 hover:text-black transition font-bold'>
                         Subscribe
                     </button>
                 </form>
@@ -35,7 +35,7 @@ function Footer() {
                             <li key={link} className='group relative'>
                                 <a 
                                     href={`#${link.toLowerCase().replace(/\s/g, '')}`}
-                                    className='text-white transition-colors hover:text-zinc-300'>
+                                    className='text-white transition-colors hover:text-black'>
                                     {link}
                                 </a>
                                 <span
