@@ -167,9 +167,8 @@ function Index() {
               <img
                 src={AboutImage}
                 alt='About'
-                className='w-full h-auto rounded-lg shadow-lg' />
+                className='w-full h-auto rounded-lg shadow-lg'/>
             </div>
-
             {/* Content */}
             <div className='text-center md:text-left border-4 p-3 rounded-lg shadow-2xl'>
               <h2 className='text-4xl font-bold mb-4 text-zinc-800 text-center'>We Are...</h2>
