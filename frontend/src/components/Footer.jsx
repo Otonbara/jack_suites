@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../assets/Logo.jpg';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -46,6 +47,33 @@ function Footer() {
                     </ul>
                 </div>
             </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="mt-6">
+            <h3 className="text-white text-lg font-bold text-center mb-4">Follow Us</h3>
+            <ul className="flex justify-center gap-6">
+            <li>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="text-white text-xl hover:text-black transition-colors" />
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className="text-white text-xl hover:text-black transition-colors" />
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-white text-xl hover:text-black transition-colors" />
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-white text-xl hover:text-black transition-colors" />
+                </a>
+            </li>
+            </ul>
         </div>
 
         {/* Map */}
