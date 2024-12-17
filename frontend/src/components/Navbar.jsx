@@ -21,7 +21,7 @@ function Navbar() {
           <li>
             <a
               href="#home"
-              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black"
+              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Home
             </a>
@@ -29,7 +29,7 @@ function Navbar() {
           <li>
             <a
               href="#about"
-              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black"
+              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               About
             </a>
@@ -37,7 +37,7 @@ function Navbar() {
           <li>
             <a
               href="#rooms"
-              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black"
+              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Rooms
             </a>
@@ -45,7 +45,7 @@ function Navbar() {
           <li>
             <a
               href="#services"
-              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black"
+              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Services
             </a>
@@ -53,7 +53,7 @@ function Navbar() {
           <li>
             <a
               href="#contact"
-              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black"
+              className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Contact Us
             </a>

@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -10,6 +12,7 @@ import { FaBed, FaUsers, FaDollarSign } from 'react-icons/fa'
 import HeroImage1 from '../assets/hero-image-1.jpg';
 import HeroImage2 from '../assets/hero-image-2.jpg';
 import HeroImage3 from '../assets/hero-image-3.jpg';
+import AboutImage from '../assets/about.jpg'
 import ParaImage from '../assets/parallax-image.jpg'
 import RoomImage1 from '../assets/room-1(0).jpg'
 import RoomImage2 from '../assets/room-2(0).jpg'
@@ -19,6 +22,15 @@ import ServiceImage2 from '../assets/dining(0).jpg'
 import ServiceImage3 from '../assets/spa(0).jpg'
 
 function Index() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    })
+  }, [])
+
   return (
     <div>
       {/* Hero Section */}
@@ -41,7 +53,7 @@ function Index() {
               <div className='absolute inset-0' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
               {/* Content */}
               <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='text-center text-white px-6'>
+                <div className='text-center text-white px-6' data-aos="fade-up">
                   <h1 className='text-4xl font-bold mb-4'>Welcome to Jack Suites</h1>
                   <p className='text-lg md:text-2xl mb-6'>Experience luxury and comfort in our hotel</p>
                   <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
@@ -61,7 +73,7 @@ function Index() {
               <div className='absolute inset-0' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
               {/* Content */}
               <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='text-center text-white px-6'>
+                <div className='text-center text-white px-6' data-aos="fade-up">
                   <h1 className='text-4xl font-bold mb-4'>Experience True Comfort</h1>
                   <p className='text-lg md:text-2xl mb-6'>Rooms designed for you to feel at home</p>
                   <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
@@ -81,7 +93,7 @@ function Index() {
               <div className='absolute inset-0' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
               {/* Content */}
               <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='text-center text-white px-6'>
+                <div className='text-center text-white px-6' data-aos="fade-up">
                   <h1 className='text-4xl font-bold mb-4'>Unmatched Luxury Services</h1>
                   <p className='text-lg md:text-2xl mb-6'>Premium services tailored for your comfort</p>
                   <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
@@ -95,11 +107,11 @@ function Index() {
       </section>
 
       {/* Check-In Card Section */}
-      <section className='relative -mt-16 z-10'>
-        <div className='container mx-auto px-4'>
+      <section className='relative -mt-16 z-10 bg-transparent'>
+        <div className='container mx-auto px-4' data-aos="fade-down">
           <div className='bg-slate-800 shadow-xl shadow-zinc-500 rounded-lg p-6 grid grid-cols-1 md:grid-cols-4 gap-4'>
             {/* Check-In Date */}
-            <div className='flex flex-col'>
+            <div className='flex flex-col' data-aos="flip-left">
               <label htmlFor='checkin' className='text-white font-semibold mb-2'>
                 Check-In Date
               </label>
@@ -110,7 +122,7 @@ function Index() {
             </div>
 
             {/* Check-Out Date */}
-            <div className='flex flex-col'>
+            <div className='flex flex-col' data-aos="flip-left">
               <label htmlFor='checkout' className='text-white font-semibold mb-2'>
                 Check-Out Date
               </label>
@@ -121,7 +133,7 @@ function Index() {
             </div>
 
             {/* Number of Guests */}
-            <div className='flex flex-col'>
+            <div className='flex flex-col' data-aos="flip-left">
               <label htmlFor='guests' className='text-white font-semibold mb-2'>
                 Guests
               </label>
@@ -136,10 +148,38 @@ function Index() {
             </div>
 
             {/* Check Availability Button */}
-            <div className='flex items-end'>
+            <div className='flex items-end' data-aos="flip-right">
               <button
                 className='w-full bg-zinc-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-zinc-400 hover:text-black transition'>
                 Check Availability
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className='bg-gray-100 mb-8 -mt-8'>
+        <div className='container mx-auto px-4 py-16' data-aos="fade-down">
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
+            {/* Image */}
+            <div className='relative'>
+              <img
+                src={AboutImage}
+                alt='About'
+                className='w-full h-auto rounded-lg shadow-lg' />
+            </div>
+
+            {/* Content */}
+            <div className='text-center md:text-left border-4 p-3 rounded-lg shadow-2xl'>
+              <h2 className='text-4xl font-bold mb-4 text-zinc-800 text-center'>We Are...</h2>
+              <p className='text-lg text-zinc-800 mb-6'>
+              Jack Suites, a luxury hotel offering a serene and elegant escape in the heart of Lagos, Nigeria. 
+              Whether you're traveling for business or leisure, our well-appointed rooms, top-notch services, 
+              and warm hospitality make us the perfect choice for a memorable stay.
+              </p>
+              <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
+                Learn More
               </button>
             </div>
           </div>
@@ -153,7 +193,7 @@ function Index() {
           {/* Backgound Overlay */}
           <div className='absolute inset-0' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
               {/* Content */}
-              <div className='absolute inset-0 flex items-center justify-center'>
+              <div className='absolute inset-0 flex items-center justify-center' data-aos="fade-in">
                 <div className='text-center text-white px-6'>
                   <h2 className='text-4xl font-bold mb-4 md:text-5xl'>Experience Unmatched Luxury</h2>
                   <p className='text-lg md:text-2xl mb-6'>Your comfort is our priority - Discover world-class hospitality.</p>
@@ -166,12 +206,12 @@ function Index() {
 
       {/* Available Rooms Section */}
       <section className='py-16 bg-gray-100'>
-        <div className='container mx-auto px-4 text-center'>
+        <div className='container mx-auto px-4 text-center' data-aos='fade-down'>
           <h2 className='text-4xl font-bold mb-4 text-zinc-800'>Our Available Rooms</h2>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 
             {/* Room 1 */}
-            <div className='bg-white shadow-lg rounded-lg overflow-hidden'>
+            <div className='bg-white shadow-lg rounded-lg overflow-hidden hover:-translate-y-2'>
               <img 
                 src={RoomImage1}
                 alt="Deluxe Suite"
@@ -199,7 +239,7 @@ function Index() {
             </div>
 
             {/* Room 2 */}
-            <div className='bg-white shadow-lg rounded-lg overflow-hidden'>
+            <div className='bg-white shadow-lg rounded-lg overflow-hidden hover:-translate-y-2'>
               <img 
                 src={RoomImage2}
                 alt="Presidential Suite"
@@ -227,7 +267,7 @@ function Index() {
             </div>
 
             {/* Room 3 */}
-            <div className='bg-white shadow-lg rounded-lg overflow-hidden'>
+            <div className='bg-white shadow-lg rounded-lg overflow-hidden hover:-translate-y-2'>
               <img 
                 src={RoomImage3}
                 alt="Executive Room"
@@ -265,17 +305,17 @@ function Index() {
           {/* Service 1 */}
           <div className="flex flex-col md:flex-row items-center mb-12">
             {/* Image */}
-            <div className="w-full md:w-1/2 mb-6 md:mb-0">
+            <div className="w-full md:w-1/2 mb-6 md:mb-0" data-aos="flip-left">
               <img 
                 src={ServiceImage1}
                 alt="Luxury Accommodation" 
                 className='w-full h-80 object-cover rounded-lg shadow-lg'/>
             </div>
             {/* Content */}
-            <div className="w-full md:w-1/2 px-6">
+            <div className="w-full md:w-1/2 px-6" data-aos="flip-right">
               <h3 className="text-2xl font-bold mb-4 text-zinc-700">Luxury Accommodation</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Enjoy top-class rooms and suites designed with cmfort and elegance.
+                Enjoy top-class rooms and suites designed with comfort and elegance.
                 Experience premium luxury in a serene environment.
               </p>
               <button className="px-4 py-2 bg-zinc-500 text-black font-bold rounded-full hover:bg-zinc-400 transition">
@@ -287,14 +327,14 @@ function Index() {
           {/* Service 2 */}
           <div className="flex flex-col md:flex-row-reverse items-center mb-12">
             {/* Image */}
-            <div className="w-full md:w-1/2 mb-6 md:mb-0">
+            <div className="w-full md:w-1/2 mb-6 md:mb-0" data-aos="flip-right">
               <img
                 src={ServiceImage2}
                 alt="Fine Dining Experience"
                 className='w-full h-80 object-cover rounded-lg shadow-lg'/>
             </div>
             {/* Content */}
-            <div className="w-full md:w-1/2 px-6">
+            <div className="w-full md:w-1/2 px-6" data-aos="flip-left">
               <h3 className="text-2xl font-bold mb-4 text-zinc-700">Fine Dining Experience</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Savour exquisite cuisines from around the world prepared by our world-class chefs,
@@ -309,14 +349,14 @@ function Index() {
           {/* Service 3 */}
           <div className="flex flex-col md:flex-row items-center">
             {/* Image */}
-            <div className="w-full md:w-1/2 mb-6 md:mb-0">
+            <div className="w-full md:w-1/2 mb-6 md:mb-0" data-aos="flip-left">
               <img
                 src={ServiceImage3}
                 alt="Spa and Wellness"
                 className='w-full h-80 object-cover rounded-lg shadow-lg'/>
             </div>
             {/* Content */}
-            <div className="w-full md:w-1/2 px-6">
+            <div className="w-full md:w-1/2 px-6"  data-aos="flip-right">
               <h3 className="text-2xl font-bold mb-4 text-zinc-700">Spa and Wellness</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Indulge in our state-of-the-art spa facilities, offering a range of treatments
@@ -332,7 +372,7 @@ function Index() {
 
       {/* Customer Reviews Section */}
       <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4" data-aos="slide-up">
           <h2 className="text-4xl font-bold text-center mb-12 text-zinc-800">
             What Our Guests Say
           </h2>
@@ -340,7 +380,7 @@ function Index() {
           {/* Swiper Carousel */}
           <Swiper
             modules={[Autoplay, EffectFade, Pagination]}
-            autoplay={{ delay: 4000 }}
+            autoplay={{ delay: 3000 }}
             effect="fade"
             pagination={{ clickable: true }}
             loop={true}
