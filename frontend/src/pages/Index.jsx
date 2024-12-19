@@ -20,6 +20,7 @@ import RoomImage3 from '../assets/room-3(0).jpg'
 import ServiceImage1 from '../assets/serene.jpg'
 import ServiceImage2 from '../assets/dining(0).jpg'
 import ServiceImage3 from '../assets/spa(0).jpg'
+import { Link } from 'react-router-dom';
 
 function Index() {
 
@@ -42,6 +43,7 @@ function Index() {
           pagination={{ clickable: true }}
           navigation={true}
           loop={true}
+          grabCursor={true}
           className='w-full h-full'>
           
           {/* Slide 1 */}
@@ -56,9 +58,11 @@ function Index() {
                 <div className='text-center text-white px-6' data-aos="fade-up">
                   <h1 className='text-4xl font-bold mb-4'>Welcome to Jack Suites</h1>
                   <p className='text-lg md:text-2xl mb-6'>Experience luxury and comfort in our hotel</p>
-                  <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
-                    Book Now
-                  </button>
+                  <Link to="/rooms">
+                    <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
+                      Book Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -76,9 +80,11 @@ function Index() {
                 <div className='text-center text-white px-6' data-aos="fade-up">
                   <h1 className='text-4xl font-bold mb-4'>Experience True Comfort</h1>
                   <p className='text-lg md:text-2xl mb-6'>Rooms designed for you to feel at home</p>
-                  <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
-                    Explore Rooms
-                  </button>
+                  <Link to="/rooms">
+                    <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
+                      Book Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -96,9 +102,11 @@ function Index() {
                 <div className='text-center text-white px-6' data-aos="fade-up">
                   <h1 className='text-4xl font-bold mb-4'>Unmatched Luxury Services</h1>
                   <p className='text-lg md:text-2xl mb-6'>Premium services tailored for your comfort</p>
-                  <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
-                    Discover More
-                  </button>
+                  <Link to="/rooms">
+                    <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
+                      Book Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -167,6 +175,7 @@ function Index() {
               <img
                 src={AboutImage}
                 alt='About'
+                loading='lazy'
                 className='w-full h-auto rounded-lg shadow-lg'/>
             </div>
             {/* Content */}
@@ -177,9 +186,11 @@ function Index() {
               Whether you're traveling for business or leisure, our well-appointed rooms, top-notch services, 
               and warm hospitality make us the perfect choice for a memorable stay.
               </p>
-              <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
-                Learn More
-              </button>
+              <Link to="/about">
+                <button className='px-6 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-300 hover:text-black transition font-bold'>
+                  Learn More
+                  </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -196,9 +207,11 @@ function Index() {
                 <div className='text-center text-white px-6'>
                   <h2 className='text-4xl font-bold mb-4 md:text-5xl'>Experience Unmatched Luxury</h2>
                   <p className='text-lg md:text-2xl mb-6'>Your comfort is our priority - Discover world-class hospitality.</p>
-                  <button className='px-6 py-2 bg-zinc-500 font-bold text-black rounded-full hover:bg-zinc-300 hover:text-black transition'>
-                    Book Your Stay
-                  </button>
+                  <Link to="/rooms">
+                    <button className='px-6 py-2 bg-zinc-500 font-bold text-black rounded-full hover:bg-zinc-300 hover:text-black transition'>
+                      Book Your Stay
+                    </button>
+                  </Link>
                 </div>
               </div>
       </section>
@@ -231,9 +244,11 @@ function Index() {
                     <FaDollarSign className="text-zinc-500 mr-2"></FaDollarSign> $200 / night
                   </li>
                 </ul>
-                <button className='px-4 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-400 transition font-bold'>
-                  Book Now
-                </button>
+                <Link to="/rooms">
+                  <button className='px-6 py-2 bg-zinc-500 font-bold text-black rounded-full hover:bg-zinc-300 hover:text-black transition'>
+                    Book Now
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -259,9 +274,11 @@ function Index() {
                     <FaDollarSign className="text-zinc-500 mr-2"></FaDollarSign> $375 / night
                   </li>
                 </ul>
-                <button className='px-4 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-400 transition font-bold'>
-                  Book Now
-                </button>
+                <Link to="/rooms">
+                  <button className='px-6 py-2 bg-zinc-500 font-bold text-black rounded-full hover:bg-zinc-300 hover:text-black transition'>
+                    Book Now
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -287,12 +304,19 @@ function Index() {
                     <FaDollarSign className="text-zinc-500 mr-2"></FaDollarSign> $230 / night
                   </li>
                 </ul>
-                <button className='px-4 py-2 bg-zinc-500 text-black rounded-full hover:bg-zinc-400 transition font-bold'>
-                  Book Now
-                </button>
+                <Link to="/rooms">
+                  <button className='px-6 py-2 bg-zinc-500 font-bold text-black rounded-full hover:bg-zinc-300 hover:text-black transition'>
+                    Book Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
+          <Link to="/rooms">
+            <button className='px-6 py-2 bg-zinc-500 font-bold text-black rounded-full hover:bg-zinc-300 hover:text-black transition mt-6'>
+              View More
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -307,7 +331,8 @@ function Index() {
             <div className="w-full md:w-1/2 mb-6 md:mb-0" data-aos="flip-left">
               <img 
                 src={ServiceImage1}
-                alt="Luxury Accommodation" 
+                alt="Luxury Accommodation"
+                loading='lazy'
                 className='w-full h-80 object-cover rounded-lg shadow-lg'/>
             </div>
             {/* Content */}
@@ -317,9 +342,11 @@ function Index() {
                 Enjoy top-class rooms and suites designed with comfort and elegance.
                 Experience premium luxury in a serene environment.
               </p>
-              <button className="px-4 py-2 bg-zinc-500 text-black font-bold rounded-full hover:bg-zinc-400 transition">
-                Learn More
-              </button>
+              <Link to="/services">
+                <button className="px-4 py-2 bg-zinc-500 text-black font-bold rounded-full hover:bg-zinc-400 transition">
+                  Learn More
+                </button>
+              </Link>
             </div>             
           </div>
 
@@ -330,6 +357,7 @@ function Index() {
               <img
                 src={ServiceImage2}
                 alt="Fine Dining Experience"
+                loading='lazy'
                 className='w-full h-80 object-cover rounded-lg shadow-lg'/>
             </div>
             {/* Content */}
@@ -339,9 +367,11 @@ function Index() {
                 Savour exquisite cuisines from around the world prepared by our world-class chefs,
                 served in luxurious settings.
               </p>
-              <button className="px-4 py-2 bg-zinc-500 text-black font-bold rounded-full hover:bg-zinc-400 transition">
-                Learn More
-              </button>
+              <Link to="/services">
+                <button className="px-4 py-2 bg-zinc-500 text-black font-bold rounded-full hover:bg-zinc-400 transition">
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -352,6 +382,7 @@ function Index() {
               <img
                 src={ServiceImage3}
                 alt="Spa and Wellness"
+                loading='lazy'
                 className='w-full h-80 object-cover rounded-lg shadow-lg'/>
             </div>
             {/* Content */}
@@ -361,9 +392,11 @@ function Index() {
                 Indulge in our state-of-the-art spa facilities, offering a range of treatments
                 to rejuvenate your body and mind.
               </p>
-              <button className="px-4 py-2 bg-zinc-500 text-black font-bold rounded-full hover:bg-zinc-400 transition">
-                Learn More
-              </button>
+              <Link to="/services">
+                <button className="px-4 py-2 bg-zinc-500 text-black font-bold rounded-full hover:bg-zinc-400 transition">
+                  Learn More
+                </button>
+              </Link>
             </div> 
           </div>
         </div>
@@ -383,8 +416,8 @@ function Index() {
             effect="fade"
             pagination={{ clickable: true }}
             loop={true}
-            className="w-full max-w-4xl mx-auto relative"
-          >
+            grabCursor={true}
+            className="w-full max-w-4xl mx-auto relative">
             {/* Review 1 */}
             <SwiperSlide className="opacity-0 scale-90 transition-transform duration-700 ease-in-out">
               <div className="bg-white p-8 rounded-lg shadow-lg text-center transform transition-all duration-700">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../assets/Logo.jpg';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -34,11 +35,11 @@ function Footer() {
                     <ul className="flex flex-wrap flex-row justify-center md:justify-start gap-6">
                         {['Home', 'About', 'Rooms', 'Services', 'Contact Us'].map((link) => (
                             <li key={link} className='group relative'>
-                                <a 
-                                    href={`#${link.toLowerCase().replace(/\s/g, '')}`}
+                                <Link 
+                                    to={`/${link.toLowerCase().replace(/\s/g, '')}`}
                                     className='text-white transition-colors hover:text-black'>
                                     {link}
-                                </a>
+                                </Link>
                                 <span
                                     className='block absolute bottom-0 left-0 w-0 h-0.5 bg-zinc-500 group-hover:w-full transition-all'>
                                 </span>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Logo from '../assets/Logo.jpg';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -19,44 +21,44 @@ function Navbar() {
         {/* Navigation Links */}
         <ul className="hidden md:flex flex-1 space-x-6 justify-center items-center">
           <li>
-            <a
-              href="#home"
+            <Link
+              to="/home"
               className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#rooms"
+            <Link
+              to="/rooms"
               className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Rooms
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#services"
+            <Link
+              to="/services"
               className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 transition hover:text-black font-bold"
             >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -115,49 +117,49 @@ function Navbar() {
         </div>
         <ul className="space-y-4 px-4">
           <li>
-            <a
-              href="#home"
+            <Link
+              to="/home"
               className="block px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 hover:text-black transition"
               onClick={toggleSidebar}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="block px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 hover:text-black transition"
               onClick={toggleSidebar}
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#rooms"
+            <Link
+              to="/rooms"
               className="block px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 hover:text-black transition"
               onClick={toggleSidebar}
             >
               Rooms
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#services"
+            <Link
+              to="/services"
               className="block px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 hover:text-black transition"
               onClick={toggleSidebar}
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="block px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 hover:text-black transition"
               onClick={toggleSidebar}
             >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
