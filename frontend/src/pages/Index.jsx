@@ -20,6 +20,12 @@ import RoomImage3 from '../assets/room-3(0).jpg'
 import ServiceImage1 from '../assets/serene.jpg'
 import ServiceImage2 from '../assets/dining(0).jpg'
 import ServiceImage3 from '../assets/spa(0).jpg'
+import GridImage1 from '../assets/grid1.jpg'
+import GridImage2 from '../assets/grid2.jpg'
+import GridImage3 from '../assets/grid3.jpg'
+import GridImage4 from '../assets/grid4.jpg'
+import GridImage5 from '../assets/grid5.jpg'
+import GridImage6 from '../assets/grid6.jpg'
 import { Link } from 'react-router-dom';
 
 function Index() {
@@ -553,6 +559,18 @@ function Index() {
               </div>
             </SwiperSlide>
           </Swiper>
+        </div>
+      </section>
+      {/* Gallery Section */}
+      <section className='container mx-auto px-4 py-8 bg-gray-100'>
+        <h2 className='text-3xl text-center font-bold text-slate-800'>Gallery</h2>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4' data-aos="zoom-out">
+          <div className='w-full h-64 bg-cover bg-center' style={{ backgroundImage: `url(${GridImage1})` }}></div>
+          <div className='w-full h-64 bg-cover bg-center' style={{ backgroundImage: `url(${GridImage2})` }}></div>
+          <div className='w-full h-64 bg-cover bg-center' style={{ backgroundImage: `url(${GridImage3})` }}></div>
+          <div className='w-full h-64 bg-cover bg-center' style={{ backgroundImage: `url(${GridImage4})` }}></div>
+          <div className='w-full h-64 bg-cover bg-center' style={{ backgroundImage: `url(${GridImage5})` }}></div>
+          <div className='w-full h-64 bg-cover bg-center' style={{ backgroundImage: `url(${GridImage6})` }}></div>
         </div>
       </section>
     </div>
