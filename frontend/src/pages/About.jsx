@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import AboutImage from '../assets/about.jpg'
+import PartnerImage1 from '../assets/airfrance.png'
+import PartnerImage2 from '../assets/Wakanow.png'
+import PartnerImage3 from '../assets/airbnb.png'
+import PartnerImage4 from '../assets/americaairlines.png'
+import PartnerImage5 from '../assets/along.png'
+import PartnerImage6 from '../assets/hardrockcafe.png'
+import PartnerImage7 from '../assets/uber.png'
+import PartnerImage8 from '../assets/erickayser.png'
+import PartnerImage9 from '../assets/i-fitness.svg'
 import ParaImage from '../assets/parallax-image.jpg'
 import GridImage1 from '../assets/grid1.jpg'
 import GridImage2 from '../assets/grid2.jpg'
@@ -22,7 +31,7 @@ function About() {
   }, [])
 
   return (
-    <div>
+    <div className='bg-gray-100'>
       {/* Hero Section */}
       <div
         className="hero-section bg-cover bg-center h-64 flex items-center justify-center"
@@ -33,7 +42,7 @@ function About() {
         </h1>
       </div>
 
-      <section className='container mx-auto px-4 bg-gray-100 shadow-lg'>
+      <section className='container mx-auto px-4 bg-gray-100 shadow-lg mt-4'>
         <h2 className='text-4xl text-center font-bold text-slate-800'>JACK <span className='text-zinc-500'>SUITES</span></h2>
         <p className='text-lg text-gray-700 text-justify'>
           Jack Suites is a luxury hotel offering a serene and elegant escape in the heart of Lagos, Nigeria. 
@@ -45,29 +54,32 @@ function About() {
         </p>
       </section>
 
-      {/* Mission Section */}
-      <section className='container mx-auto px-4 py-8 bg-gray-100 mt-2'>
-        <h2 className='text-3xl text-center font-bold text-slate-800'><span className='text-zinc-500'>OUR</span> MISSION</h2>
-        <p className='text-lg text-gray-700 text-justify mt-4'>
-          At Jack Suites, our mission is to provide exceptional hospitality and create unforgettable moments for our guests.
-          We strive to exceed expectations by offering a diverse range of amenities, exceptional service, and a warm atmosphere.
-          Whether you're here for business or leisure, we aim to make every stay a memorable one.
-        </p>
-      </section>
+      {/* Mission and Vision Section */}
+      <div className='container mx-auto px-4 py-8 bg-gray-100 mt-2 flex flex-col md:flex-row justify-between' data-aos="fade-up">
+        {/* Mission Section */}
+        <section className='md:w-1/2 md:mr-4'>
+          <h2 className='text-3xl text-center font-bold text-slate-800'><span className='text-zinc-500'>OUR</span> MISSION</h2>
+          <p className='text-lg text-gray-700 text-justify mt-4'>
+            At Jack Suites, our mission is to provide exceptional hospitality and create unforgettable moments for our guests.
+            We strive to exceed expectations by offering a diverse range of amenities, exceptional service, and a warm atmosphere.
+            Whether you're here for business or leisure, we aim to make every stay a memorable one.
+          </p>
+        </section>
 
-      {/* Vision Section */}
-      <section className='container mx-auto px-4 py-8 bg-gray-100'>
-      <h2 className='text-3xl text-center font-bold text-slate-800'>OUR <span className='text-zinc-500'>VISION</span></h2>
-      <p className='text-lg text-gray-700 text-justify mt-4'>
-        Our vision is to become the leading luxury hotel in Lagos, Nigeria, known for its exceptional service
-        and warm hospitality. We aim to create a unique and memorable experience for each and every
-        guest, fostering a sense of comfort and satisfaction. We are committed to providing exceptional
-        amenities, exceptional service, and exceptional hospitality to our guests.
-      </p>
-      </section>
+        {/* Vision Section */}
+        <section className='md:w-1/2 md:ml-4 mt-8 md:mt-0'>
+          <h2 className='text-3xl text-center font-bold text-slate-800'>OUR <span className='text-zinc-500'>VISION</span></h2>
+          <p className='text-lg text-gray-700 text-justify mt-4'>
+            Our vision is to become the leading luxury hotel in Lagos, Nigeria, known for its exceptional service
+            and warm hospitality. We aim to create a unique and memorable experience for each and every
+            guest, fostering a sense of comfort and satisfaction. We are committed to providing exceptional
+            amenities, exceptional service, and exceptional hospitality to our guests.
+          </p>
+        </section>
+      </div>
 
       {/* Additional Information Section */}
-      <section className='container mx-auto px-4 py-8 bg-gray-100 shadow-lg'>
+      <section className='container mx-auto px-4 py-8 bg-gray-100' data-aos="fade-up">
         <h2 className='text-3xl text-center font-bold text-slate-800'>WHY CHOOSE US?</h2>
         <ul className='list-disc list-inside text-lg text-gray-700 mt-4'>
           <li>Prime location in the heart of Lagos</li>
@@ -76,6 +88,27 @@ function About() {
           <li>World-class amenities and facilities</li>
           <li>Personalized experiences tailored to your needs</li>
         </ul>
+      </section>
+
+      {/* Partners Section */}
+      <section className='container mx-auto px-4 py-8 bg-gray-100 mt-2'>
+        <h2 className='text-4xl text-center font-bold text-slate-800' data-aos="slide-left">OUR <span className='text-zinc-500'>PARTNERS</span></h2>
+        <p className='text-lg text-gray-700 text-justify' data-aos="slide-right">
+          We are proud to collaborate with a range of esteemed partners who share our commitment to excellence. 
+          Our partners include top travel agencies, renowned culinary experts, and leading wellness brands. 
+          Together, we strive to provide our guests with unparalleled experiences and services.
+        </p>
+        <div className='flex flex-wrap justify-center mt-4'>
+        <img src={PartnerImage1} alt='Partner 1' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage2} alt='Partner 2' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage3} alt='Partner 3' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage4} alt='Partner 4' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage5} alt='Partner 5' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage6} alt='Partner 6' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage7} alt='Partner 7' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage8} alt='Partner 8' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage9} alt='Partner 9' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
+        </div>
       </section>
 
       {/* Parallax Section */}
