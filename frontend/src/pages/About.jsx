@@ -99,15 +99,15 @@ function About() {
           Together, we strive to provide our guests with unparalleled experiences and services.
         </p>
         <div className='flex flex-wrap justify-center mt-4'>
-        <img src={PartnerImage1} alt='Partner 1' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
-        <img src={PartnerImage2} alt='Partner 2' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
-        <img src={PartnerImage3} alt='Partner 3' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
-        <img src={PartnerImage4} alt='Partner 4' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
-        <img src={PartnerImage5} alt='Partner 5' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
-        <img src={PartnerImage6} alt='Partner 6' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
-        <img src={PartnerImage7} alt='Partner 7' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
-        <img src={PartnerImage8} alt='Partner 8' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-out"*//>
-        <img src={PartnerImage9} alt='Partner 9' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage1} alt='Partner 1' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:-my-2' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage2} alt='Partner 2' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:my-4' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage3} alt='Partner 3' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:-my-2' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage4} alt='Partner 4' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:my-4' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage5} alt='Partner 5' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:-my-2' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage6} alt='Partner 6' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:my-4' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage7} alt='Partner 7' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:-my-2' loading='lazy' /*data-aos="zoom-in"*//>
+        <img src={PartnerImage8} alt='Partner 8' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:my-4' loading='lazy' /*data-aos="zoom-out"*//>
+        <img src={PartnerImage9} alt='Partner 9' className='h-16 mx-4 my-2 transform transition-transform duration-300 hover:scale-110 hover:-my-2' loading='lazy' /*data-aos="zoom-in"*//>
         </div>
       </section>
 

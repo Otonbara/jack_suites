@@ -154,7 +154,7 @@ function Navbar() {
           </li>
           <li>
             <Link
-              to="/contact"
+              to="/contactus"
               className="block px-4 py-2 bg-zinc-500 text-white rounded-full hover:bg-zinc-300 hover:text-black transition"
               onClick={toggleSidebar}
             >
