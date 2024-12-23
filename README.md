@@ -77,7 +77,7 @@ jack-suites/
 ## Pages
 
 - **Home**: Overview of the hotel with a welcoming banner and key highlights.
-- **About**: Detailed information about Jack Suites, modeled after [Eko Hotels About Us](https://www.ekohotels.com/about-us.php).
+- **About**: Detailed information about Jack Suites
 - **Rooms**: Showcase of available suites, including Penthouse and Standard options.
 - **Services**: Overview of the services and amenities offered.
 - **Contact**: A simple form for inquiries and feedback.
