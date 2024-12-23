@@ -277,7 +277,7 @@ function Index() {
                     <FaUsers className="text-zinc-500 mr-2"></FaUsers> Accommodates 2-3 Guests
                   </li>
                   <li className="flex items-center mb-1">
-                    <FaDollarSign className="text-zinc-500 mr-2"></FaDollarSign> $375 / night
+                    <FaDollarSign className="text-zinc-500 mr-2"></FaDollarSign> $500 / night
                   </li>
                 </ul>
                 <Link to="/rooms">
@@ -307,7 +307,7 @@ function Index() {
                     <FaUsers className="text-zinc-500 mr-2"></FaUsers> Accommodates 2 Guests
                   </li>
                   <li className="flex items-center mb-1">
-                    <FaDollarSign className="text-zinc-500 mr-2"></FaDollarSign> $230 / night
+                    <FaDollarSign className="text-zinc-500 mr-2"></FaDollarSign> $300 / night
                   </li>
                 </ul>
                 <Link to="/rooms">
